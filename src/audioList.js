@@ -10,7 +10,7 @@ const audioModules = import.meta.glob(
 
 // 🖼 كل الصور
 const imageModules = import.meta.glob(
-  "./assets/**/*.{png,jpg,jpeg,webp}",
+  "./assets/**/*.{png,jpg,jpeg,webp,svg}",
   { eager: true }
 );
 
