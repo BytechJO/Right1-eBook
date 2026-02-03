@@ -1,0 +1,126 @@
+/* يغطي الشاشة */
+.popup-overlay {
+  position: fixed;
+  top: 0px; /* ارتفاع النافبار */
+  left: 0;
+  width: 100%;
+  height: 100vh; /* يغطي باقي الشاشة */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* الشكل العام */
+.popup-content {
+  position: relative;
+  display: inline-block; /* مهم جداً */
+  background: #fff;
+  border-radius: 12px;
+  /* padding: 20px; */
+  animation: fadeIn 0.2s ease;
+  overflow: visible;
+}
+.popup-overlay.popup-audio {
+  position: fixed;
+  top: 55px; /* ارتفاع النافبار */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 45px); /* يغطي باقي الشاشة */
+  background: transparent;
+  z-index: 999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.popup-content video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* إذا داخلها Audio → حجم طبيعي */
+.audio-size {
+  position: relative;
+  background: transparent;
+  border-radius: 12px;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+  width: 520px;
+  height: 300px;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.video-size {
+  position: relative;
+  background: transparent;
+  border-radius: 12px;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+  width: auto;
+  height: calc(100vh - 50px); /* يغطي باقي الشاشة */
+  border-radius: 0;
+}
+/* إذا مش Audio → fullscreen */
+.fullscreen-size {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+  width: 100vw;
+  height: 100vh; /* يغطي باقي الشاشة */
+  border-radius: 0;
+}
+.exercise-size {
+  background: #fff;
+  border-radius: 12px;
+  /* padding: 20px; */
+  animation: fadeIn 0.2s ease;
+  width: 100vw;
+  height: 100vh; /* يغطي باقي الشاشة */
+  border-radius: 0;
+}
+/* زر الإغلاق */
+.popup-close-btn {
+  position: absolute;
+   top: 0px; /* ارتفاع النافبار */
+  right: 0px;
+background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+.popup-close-btn.type-exercise {
+  color: white;
+  top: 0px;
+  right: 0px;
+}
+.popup-close-btn.type-audio {
+  position: absolute !important;
+     top: 7%;
+  right: 4%;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.popup-close-btn.type-video {
+  position: absolute;
+  top: 12%;
+  right: 2.5%;
+  font-size: 24px;
+  border-radius: 50%;
+  padding: 6px;
+  z-index: 99999;
+}

@@ -1,0 +1,155 @@
+.question-wrapper {
+  font-size: 1.4rem;
+}
+
+.row2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.q-img {
+  width: 160px;
+  height: auto;
+}
+/* ⭐ مكان الدروب داخل الجملة */
+.drop-slot-inline-unit2-p8-q2 {
+  display: inline-block;
+  min-width: 120px; /* 🔥 هذا الأهم */
+  height: 28px;
+  border-bottom: 2px solid #000;
+  margin: 0 6px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  line-height: 28px;
+}
+
+/* أثناء السحب فوقه */
+.drop-slot-inline-unit2-p8-q2.drag-over {
+  background-color: #eef5ff;
+}
+
+/* wrapper للتموضع */
+.drop-slot-wrapper-unit2-p8-q2 {
+  position: relative;
+  display: inline-block;
+}
+
+.q-input {
+  border-bottom: 2px solid #000000;
+  padding: 5px 8px;
+  /* border-radius: 6px; */
+  font-size: 18px;
+  /* width: 120px; */
+  text-align: center; /* توسيط أفقي */
+  vertical-align: middle; /* توسيط عمودي */
+  line-height: normal;
+}
+
+/* 🏷️ بنك الكلمات */
+.word-bank-unit2-p8-q2 {
+  display: flex;
+  gap: 5px;
+  margin: 15px 0 25px;
+  flex-wrap: wrap;
+  border: 2px solid #4b74ff;
+  background-color: #f2f6ff;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 10px;
+  /* height: 60px; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+/* 🟦 الكلمة القابلة للسحب */
+.word-item-unit2-p8-q2 {
+  padding: 8px 14px;
+  background-color: #f2f6ff;
+  border: 2px solid #2c5287;
+  border-radius: 8px;
+  font-size: 20px;
+  /* font-weight: bold; */
+  /* color: #1f3cff; */
+  cursor: grab;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+/* ✨ Hover (إحساس إنها بتنسحب) */
+.word-item-unit2-p8-q2:hover {
+  background-color: #e1e9ff;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ✋ أثناء السحب */
+.word-item-unit2-p8-q2:active {
+  cursor: grabbing;
+}
+
+/* 🔒 كلمة مستخدمة */
+.word-item-unit2-p8-q2.used {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: #eee;
+  border-color: #999;
+  color: #777;
+  pointer-events: none;
+  transform: none;
+  box-shadow: none;
+}
+
+.check-btn {
+  margin-top: 20px;
+  padding: 8px 20px;
+  border: none;
+  background: #38bdf8;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.score {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.row-content22 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.num-span {
+  color: #2c5287;
+  font-weight: 700;
+}
+
+.error-mark-input {
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  width: 26px;
+  height: 26px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 999999;
+  border: 2px solid white;
+}
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .q-img {
+    width: 130px;
+    height: auto;
+  }
+}
