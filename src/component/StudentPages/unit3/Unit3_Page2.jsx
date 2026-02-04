@@ -70,13 +70,13 @@ const Unit3_Page2 = ({ openPopup }) => {
 
   const areas = [
     // الصوت الأول – المنطقة الأساسية
-    { x1: 23.2, y1: 18.5, sound: 1, isPrimary: true },
+    { x1: 23, y1: 18.5, sound: 1, isPrimary: true },
 
     // الصوت الأول – منطقة إضافية
     { x1: 8.4, y1: 5.6, x2: 32.8, y2:17.47, sound: 1, isPrimary: false },
 
     // الصوت الثاني – الأساسية
-    { x1: 19.4, y1: 27.9, sound: 2, isPrimary: true },
+    { x1: 19.2, y1: 27.9, sound: 2, isPrimary: true },
 
     // الصوت الثاني – الإضافية
     { x1: 7.4, y1: 26.7, x2: 21.2, y2: 38.8, sound: 2, isPrimary: false },

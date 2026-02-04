@@ -65,7 +65,7 @@ const Unit4_Page1 = ({ openPopup }) => {
     { x1: 25.2, y1: 20.18, x2: 36.2, y2: 28.9, sound: 1, isPrimary: false },
 
     // // // // الصوت الثاني – الأساسية
-    { x1: 67.4, y1: 49.9, sound: 2, isPrimary: true },
+    { x1: 67.6, y1: 49.9, sound: 2, isPrimary: true },
     // // // // الصوت الثاني – الإضافية
     { x1: 70, y1: 45.4, x2: 75.4, y2: 57.9, sound: 2, isPrimary: false },
 

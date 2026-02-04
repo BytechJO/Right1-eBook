@@ -78,7 +78,7 @@ const Unit9_Page2 = ({ openPopup }) => {
   ];
   const areas = [
     // الصوت الأول – المنطقة الأساسية
-    { x1: 28.15, y1: 31.86, sound: 1, isPrimary: true },
+    { x1: 28.3, y1: 31.86, sound: 1, isPrimary: true },
 
     // // // الصوت الأول – منطقة إضافية
     { x1: 13.44, y1: 29.15, x2: 40.59, y2:47.49, sound: 1, isPrimary: false },

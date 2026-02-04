@@ -48,7 +48,7 @@ const Unit3_Page1 = ({ openPopup }) => {
   ];
   const areas = [
     // الصوت الأول – المنطقة الأساسية
-    { x1: 24.0, y1: 18.66, sound: 1, isPrimary: true },
+    { x1: 24.2, y1: 18.66, sound: 1, isPrimary: true },
 
     // // // الصوت الأول – منطقة إضافية
     { x1: 23.5, y1: 12.23, x2: 70.9, y2: 33.4, sound: 1, isPrimary: false },
@@ -60,12 +60,12 @@ const Unit3_Page1 = ({ openPopup }) => {
     { x1: 50.23, y1: 42.8, x2: 71.8, y2: 57.9, sound: 2, isPrimary: false },
 
     // // // الصوت الثالث – الأساسية
-    { x1: 75.3, y1: 43.0, sound: 3, isPrimary: true },
+    { x1: 75.5, y1: 42.8, sound: 3, isPrimary: true },
 
     // // // الصوت الثالث – الإضافية
     { x1: 84, y1: 34.06, x2: 98, y2: 44.9, sound: 3, isPrimary: false },
     // // // الصوت الرابع – الأساسية
-    { x1: 70.5, y1: 62.6, sound: 4, isPrimary: true },
+    { x1: 70.8, y1: 62.6, sound: 4, isPrimary: true },
 
      // // الصوت الرابع – الإضافية
     { x1: 78, y1: 54.3, x2: 99.4, y2: 65.03, sound: 4, isPrimary: false },
