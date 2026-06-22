@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import page_9 from "../../../assets/unit1/imgs/Pages/Right 1 Unit 01 Good Morning World 2_page-0009.jpg";
-import Page9_Q1 from "./Page9_Q1";
-import Page9_Q2 from "./Page9_Q2";
+
 import song from "../../../assets/unit1/sounds/pg9-song-all.mp3";
 import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
@@ -27,7 +26,7 @@ const Page9 = ({ openPopup }) => {
       style={{ backgroundImage: `url(${page_9})` }}
     >
       {/* <img src={page_9} /> */}
-      <div
+      {/* <div
         className="headset-icon-CD-page9 hover:scale-110 transition"
         style={{ overflow: "visible" }}
       >
@@ -62,7 +61,7 @@ const Page9 = ({ openPopup }) => {
           />
         </svg>
       </div>
-      {/* <div
+      <div
         className="click-icon-page9-1 hover:scale-110 transition"
         style={{ overflow: "visible" }}
       >

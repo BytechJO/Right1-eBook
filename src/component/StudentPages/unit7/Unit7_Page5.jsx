@@ -2,10 +2,7 @@ import page_5 from "../../../assets/unit7/img/Right 1 Unit 07 What are Matter5.j
 import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
 import "./Unit7_Page5.css";
-import Unit7_Page5_Q1 from "./Unit7_Page5_Q1";
-import Unit7_Page5_Q2 from "./Unit7_Page5_Q2";
-import Unit7_Page5_Q3 from "./Unit7_Page5_Q3";
-import Unit7_Page5_Q4 from "./Unit7_Page5_Q4";
+
 const Unit7_Page5 = ({ openPopup }) => {
   return (
     <div

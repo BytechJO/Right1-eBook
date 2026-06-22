@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import page_3 from "../../../assets/unit10/imgs/Right 1 Unit 10 We Want Ice Cream3.jpg";
 import "./Unit10_Page3.css";
-import CD22_pg24_Grammar1_AdultLady from "../../../assets/unit5/sounds/U5P42Grammar.mp3";
+import CD22_pg24_Grammar1_AdultLady from "../../../assets/unit10/sound/cd78pg84-grammar1-adult-lady_NHS0JA7i.mp3";
 import sound1 from "../../../assets/unit10/sound/Pg84_1.1_Adult Lady.mp3";
 import sound2 from "../../../assets/unit10/sound/Pg84_1.2_Adult Lady.mp3";
 import sound3 from "../../../assets/unit10/sound/Pg84_2.1_Jack .mp3";
@@ -10,49 +10,41 @@ import sound5 from "../../../assets/unit10/sound/Pg84_3.1_Stella.mp3";
 import sound6 from "../../../assets/unit10/sound/Pg84_3.2_Helen.mp3";
 import sound7 from "../../../assets/unit10/sound/Pg84_4.1_Mom.mp3";
 import sound8 from "../../../assets/unit10/sound/Pg84_4.2_Sarah.mp3";
-// import sound9 from "../../../assets/unit9/sound/Pg78_4.1_Tom.mp3";
-// import sound10 from "../../../assets/unit9/sound/Pg78_4.2_Helen.mp3";
 import AudioWithCaption from "../../AudioWithCaption";
 import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
 import pauseBtn from "../../../assets/unit1/imgs/Right Video Button.svg";
-import video from "../../../assets/unit5/sounds/p42.mp4";
+import video from "../../../assets/unit1/sounds/p84.mp4";
+import { useContext } from "react";
+import { AudioContext } from "../../../AudioContext";
+
 const Unit10_Page3 = ({ openPopup }) => {
-  const audioRef = useRef(null);
+  const { audioRef, activeId, setActiveId } = useContext(AudioContext);
   const [hoveredAreaIndex, setHoveredAreaIndex] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [activeAreaIndex, setActiveAreaIndex] = useState(null);
   const captionsExample = [
-    { start: 0, end: 4.12, text: "Page 42. Exercise one. Right Grammar. " },
-    { start: 4.15, end: 5.28, text: "What's this? " },
     {
-      start: 5.31,
-      end: 7.22,
-      text: "This is my book. ",
+      start: 0.219,
+      end: 8.34,
+      text: "Page 84, exercise 1, Right grammar. What do you want? I want milk.",
     },
-    {
-      start: 7.25,
-      end: 9.19,
-      text: "This is your book. ",
-    },
-    { start: 9.22, end: 11.05, text: "What's this? " },
-    { start: 11.08, end: 12.29, text: "This is a desk." },
-    { start: 12.32, end: 14.13, text: "What's this? " },
-    { start: 14.18, end: 16.09, text: "This is a chair." },
-    { start: 16.12, end: 18.01, text: "This is my book. " },
-    { start: 18.04, end: 19.21, text: "This is your book." },
+    { start: 8.34, end: 10.099, text: "What do you want?" },
+    { start: 10.099, end: 11.719, text: "I want milk." },
+    { start: 11.719, end: 13.799, text: "What do you want?" },
+    { start: 13.799, end: 15.559, text: "I want an apple." },
+    { start: 15.559, end: 17.039, text: "What do you want?" },
+    { start: 17.039, end: 17.76, text: "I want bread." },
   ];
-
   const clickableAreas = [
     { x1: 7.78, y1: 13.41, x2: 30.62, y2: 17.2, sound: sound1 },
     { x1: 67.03, y1: 13.41, x2: 81.26, y2: 17.2, sound: sound2 },
     { x1: 11.45, y1: 28.81, x2: 35.58, y2: 32.1, sound: sound3 },
     { x1: 34.07, y1: 54.55, x2: 48.94, y2: 57.7, sound: sound4 },
-    { x1: 56.26, y1: 26.10, x2: 80.4, y2: 29.32, sound: sound5 },
+    { x1: 56.26, y1: 26.1, x2: 80.4, y2: 29.32, sound: sound5 },
     { x1: 75.22, y1: 32.53, x2: 94.61, y2: 36.09, sound: sound6 },
     { x1: 35.79, y1: 60.97, x2: 59.71, y2: 64.55, sound: sound7 },
     { x1: 67.25, y1: 75.69, x2: 83.5, y2: 79, sound: sound8 },
-
   ];
 
   const handleImageClick = (e) => {
@@ -61,19 +53,21 @@ const Unit10_Page3 = ({ openPopup }) => {
     const yPercent = ((e.clientY - rect.top) / rect.height) * 100;
     console.log("X%:", xPercent.toFixed(2), "Y%:", yPercent.toFixed(2));
   };
-  const playSound = (soundPath) => {
-    if (audioRef.current) {
-      audioRef.current.src = soundPath;
-      audioRef.current.play();
-      setIsPlaying(true);
-      setHoveredAreaIndex(null); // إزالة الهايلايت عند بدء الصوت
+  const playSound = (path, id) => {
+    if (!audioRef.current) return;
 
-      audioRef.current.onended = () => {
-        setIsPlaying(false);
-        setHoveredAreaIndex(null);
-        setActiveAreaIndex(null); // مسح الهايلايت بعد انتهاء الصوت
-      };
-    }
+    // 🔥 وقف أي صوت شغال بأي صفحة
+    audioRef.current.pause();
+    audioRef.current.currentTime = 0;
+
+    audioRef.current.src = path;
+    audioRef.current.play();
+
+    setActiveId(id); // 🔥 مهم للهايلايت
+
+    audioRef.current.onended = () => {
+      setActiveId(null);
+    };
   };
   return (
     <div
@@ -90,7 +84,7 @@ const Unit10_Page3 = ({ openPopup }) => {
         <div
           key={index}
           className={`clickable-area ${
-            hoveredAreaIndex === index || activeAreaIndex === index
+            activeId === `p84-${area.sound}` || hoveredAreaIndex === index
               ? "highlight"
               : ""
           }`}
@@ -102,8 +96,7 @@ const Unit10_Page3 = ({ openPopup }) => {
             height: `${area.y2 - area.y1}%`,
           }}
           onClick={() => {
-            setActiveAreaIndex(index); // لتثبيت الهايلايت أثناء الصوت
-            playSound(area.sound);
+            playSound(area.sound, `p84-${area.sound}`);
           }}
           onMouseEnter={() => {
             if (!isPlaying) setHoveredAreaIndex(index);
@@ -136,7 +129,7 @@ const Unit10_Page3 = ({ openPopup }) => {
                   src={CD22_pg24_Grammar1_AdultLady}
                   captions={captionsExample}
                 />
-              </div>
+              </div>,
             )
           }
           style={{ overflow: "visible" }}
@@ -186,7 +179,7 @@ const Unit10_Page3 = ({ openPopup }) => {
                 >
                   <source src={video} type="video/mp4" />
                 </video>
-              </div>
+              </div>,
             )
           }
           style={{ overflow: "visible" }}

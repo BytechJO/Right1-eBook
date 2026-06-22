@@ -1,9 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import page_8 from "../../../assets/unit1/imgs/Pages/Right 1 Unit 01 Good Morning World 2_page-0008.jpg";
-import Page8_Q3 from "./Page8_Q3";
-import Page8_Q2 from "./Page8_Q2";
-import Page8_Q1 from "./Page8_Q1";
-import Page8_Q4 from "./Page8_Q4";
+
 
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
 

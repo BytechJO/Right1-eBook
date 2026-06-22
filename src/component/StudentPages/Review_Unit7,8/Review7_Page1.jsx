@@ -3,9 +3,6 @@ import "./Review7_Page1.css";
 import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
 import pauseBtn from "../../../assets/unit1/imgs/Right Video Button.svg";
-import Review7_Page1_Q1 from "./Review7_Page1_Q1";
-// import Review7_Page1_Q2 from "./Review5_Page1_Q2";
-// import Review7_Page1_Q3 from "./Review5_Page1_Q3";
 
 const Review7_Page1 = ({ openPopup }) => {
   return (

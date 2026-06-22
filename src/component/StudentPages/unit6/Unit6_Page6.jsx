@@ -1,7 +1,6 @@
 import page_6 from "../../../assets/unit6/imgs/Right 1 Unit 06 Can We Go to the Park6.jpg";
 import "./Unit6_Page6.css";
-import Unit6_Page6_Q2 from "./Unit6_Page6_Q2";
-import Unit6_Page6_Q3 from "./Unit6_Page6_Q3";
+
 import CD25_Pg27_Song_AdultLady from "../../../assets/unit6/sounds//U6P51Lets Sing.mp3";
 import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
@@ -58,7 +57,7 @@ const Unit6_Page6 = ({ openPopup }) => {
           width="22"
           height="22"
           viewBox="0 0 90 90"
-          onClick={() => openPopup("exercise", { startIndex: 90 })}
+          onClick={() => openPopup("exercise", { startIndex: 60 })}
           style={{ overflow: "visible" }}
         >
           <image href={arrowBtn} x="0" y="0" width="90" height="90" className="svg-img"/>

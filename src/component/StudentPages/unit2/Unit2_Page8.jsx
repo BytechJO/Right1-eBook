@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import page_8 from "../../../assets/img_unit2/imgs/Right 1 Unit 02 Stell Birthday8.jpg";
 import "./Unit2_Page8.css";
-import Unit2_Page8_Q1 from "./Unit2_Page8_Q1";
-import Unit2_Page8_Q3 from "./Unit2_Page8_Q3";
-import Unit2_Page8_Q2 from "./Unit2_Page8_Q2";
+
 
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
 

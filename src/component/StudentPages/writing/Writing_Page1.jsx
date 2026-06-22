@@ -11,7 +11,7 @@ const Writing_Page1 = ({ openPopup }) => {
       className="page1-img-wrapper"
       style={{ backgroundImage: `url(${page_1})` }}
     >
-      {/* <div
+      <div
         className="click-icon-writing-page hover:scale-110 transition"
         style={{ overflow: "visible" }}
       >
@@ -24,7 +24,7 @@ const Writing_Page1 = ({ openPopup }) => {
         >
           <image className="svg-img" href={arrowBtn} x="0" y="0" width="90" height="90" />
         </svg>
-      </div> */}
+      </div>
     </div>
   );
 };

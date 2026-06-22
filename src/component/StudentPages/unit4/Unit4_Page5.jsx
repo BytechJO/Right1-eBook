@@ -3,10 +3,7 @@ import "./Unit4_Page5.css";
 import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
 import pauseBtn from "../../../assets/unit1/imgs/Right Video Button.svg";
-import Unit4_Page5_Q1 from "./Unit4_Page5_Q1";
-import Unit4_Page5_Q2 from "./Unit4_Page5_Q2";
-import Unit4_Page5_Q3 from "./Unit4_Page5_Q3";
-import Unit4_Page5_Q4 from "./Unit4_Page5_Q4";
+
 
 const Unit4_Page5 = ({ openPopup }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import page_4 from "../../../assets/unit10/imgs/Right 1 Unit 10 We Want Ice Cream4.jpg";
 import "./Unit10_Page4.css";
-import CD23_pg25_Grammar2_AdultLady from "../../../assets/unit5/sounds/U5P43Grammar.mp3";
+import CD23_pg25_Grammar2_AdultLady from "../../../assets/unit10/sound/cd79pg85-grammar2-adult-lady_IH3XtT3b.mp3";
 import sound1 from "../../../assets/unit10/sound/Pg85_2.1_Adult Lady.mp3";
 import sound2 from "../../../assets/unit10/sound/Pg85_2.2_Adult Lady.mp3";
 import sound3 from "../../../assets/unit10/sound/Pg85_2.2_Adult Lady.mp3";
@@ -11,30 +11,36 @@ import sound6 from "../../../assets/unit10/sound/Pg85_4.1_Jack.mp3";
 import sound7 from "../../../assets/unit10/sound/Pg85_4.2_Harley.mp3";
 import sound8 from "../../../assets/unit10/sound/Pg85_5.1_Harley.mp3";
 import sound9 from "../../../assets/unit10/sound/Pg85_5.2_Jack.mp3";
-import video from "../../../assets/unit5/sounds/P43.mp4";
+import video from "../../../assets/unit1/sounds/p85.mp4";
 import AudioWithCaption from "../../AudioWithCaption";
 import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
 import pauseBtn from "../../../assets/unit1/imgs/Right Video Button.svg";
+import { useContext } from "react";
+import { AudioContext } from "../../../AudioContext";
+
 const Unit10_Page4 = ({ openPopup }) => {
-  const audioRef = useRef(null);
+  const { audioRef, activeId, setActiveId } = useContext(AudioContext);
   const [hoveredAreaIndex, setHoveredAreaIndex] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [activeAreaIndex, setActiveAreaIndex] = useState(null);
-  const captionsExample = [
-    { start: 0, end: 5.04, text: "Page 43. Exercise 2: Right Grammar. " },
-    { start: 5.07, end: 6.2, text: "Is this a ruler? " },
-    { start: 6.23, end: 8.04, text: "Yes, it is. " },
-    { start: 8.07, end: 10.07, text: "Is this your pen? " },
-    { start: 10.1, end: 12.12, text: "No, it isn't. " },
-    { start: 12.15, end: 14.04, text: "Is this a ruler? " },
-    { start: 14.07, end: 15.29, text: "Yes, it is. " },
-    { start: 15.32, end: 18.15, text: "Is this a book? " },
-    { start: 18.18, end: 21.12, text: "No, it isn't. It's an eraser. " },
-    { start: 21.15, end: 23.15, text: "Is this your pen? " },
-    { start: 23.18, end: 25.05, text: "Yes, it is. " },
-  ];
+const captionsExample = [
+  { start: 0.319, end: 3.98, text: "Page 85, exercise 2, Right grammar." },
 
+  { start: 5.219, end: 6.539, text: "Do you want ice cream?" },
+  { start: 6.96, end: 7.739, text: "Yes, I do." },
+  { start: 8.92, end: 10.239, text: "No, I don't." },
+  { start: 10.84, end: 11.96, text: "I want a steak." },
+
+  { start: 13.259, end: 14.299, text: "Do you want chicken?" },
+  { start: 15.38, end: 16.279, text: "Yes, I do." },
+
+  { start: 17.139, end: 18.6, text: "Do you want ice cream?" },
+  { start: 19.34, end: 20.339, text: "Yes, I do." },
+
+  { start: 20.34, end: 21.459, text: "Do you want chicken?" },
+  { start: 22.359, end: 25.5, text: "No, I don't. I want a steak." },
+];
   const clickableAreas = [
     { x1: 7.41, y1: 13.58, x2: 35.0, y2: 16.8, sound: sound1 },
     { x1: 59.77, y1: 10.87, x2: 70.54, y2: 14.09, sound: sound2 },
@@ -54,19 +60,21 @@ const Unit10_Page4 = ({ openPopup }) => {
     const yPercent = ((e.clientY - rect.top) / rect.height) * 100;
     console.log("X%:", xPercent.toFixed(2), "Y%:", yPercent.toFixed(2));
   };
-  const playSound = (soundPath) => {
-    if (audioRef.current) {
-      audioRef.current.src = soundPath;
-      audioRef.current.play();
-      setIsPlaying(true);
-      setHoveredAreaIndex(null); // إزالة الهايلايت عند بدء الصوت
+   const playSound = (soundPath, id) => {
+    if (!audioRef.current) return;
 
-      audioRef.current.onended = () => {
-        setIsPlaying(false);
-        setHoveredAreaIndex(null);
-        setActiveAreaIndex(null); // مسح الهايلايت بعد انتهاء الصوت
-      };
-    }
+    // 🔥 وقف أي صوت شغال بأي صفحة
+    audioRef.current.pause();
+    audioRef.current.currentTime = 0;
+
+    audioRef.current.src = soundPath;
+    audioRef.current.play();
+
+    setActiveId(id); // 🔥 هذا المهم
+
+    audioRef.current.onended = () => {
+      setActiveId(null);
+    };
   };
 
   return (
@@ -83,8 +91,8 @@ const Unit10_Page4 = ({ openPopup }) => {
       {clickableAreas.map((area, index) => (
         <div
           key={index}
-          className={`clickable-area ${
-            hoveredAreaIndex === index || activeAreaIndex === index
+           className={`clickable-area ${
+            activeId === `p85-${area.sound}` || hoveredAreaIndex === index
               ? "highlight"
               : ""
           }`}
@@ -96,8 +104,7 @@ const Unit10_Page4 = ({ openPopup }) => {
             height: `${area.y2 - area.y1}%`,
           }}
           onClick={() => {
-            setActiveAreaIndex(index); // لتثبيت الهايلايت أثناء الصوت
-            playSound(area.sound);
+             playSound(area.sound, `p85-${area.sound}`);
           }}
           onMouseEnter={() => {
             if (!isPlaying) setHoveredAreaIndex(index);
@@ -145,8 +152,8 @@ const Unit10_Page4 = ({ openPopup }) => {
           />
         </svg>
       </div>
-
-      {/* <div
+{/* 
+      <div
         className="pauseBtn-icon-CD-unit10-page4-1 hover:scale-110 transition"
         style={{ overflow: "visible" }}
       >

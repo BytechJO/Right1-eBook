@@ -1,9 +1,17 @@
-
+import React, { useState } from "react";
 import page_2 from "../../../assets/unit8/imgs/Right 1 Unit 08 At the Soccer Match10.jpg";
+import { FaHeadphones } from "react-icons/fa";
+import { PiCursorClickBold } from "react-icons/pi";
+import Popup from "../../Popup/Popup";
 import "./Review8_Page2.css";
+import song from "../../../assets/unit4/sounds/Pg33_Song_Adult Lady.mp3";
+import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
-
-
+import pauseBtn from "../../../assets/unit1/imgs/Right Video Button.svg";
+import AudioWithCaption from "../../AudioWithCaption";
+// import Review6_Page2_Q2 from "./Review6_Page2_Q2";
+// import Review6_Page2_Q3 from "./Review6_Page2_Q3";
+// import Review6_Page2_Q1 from "./Review6_Page2_Q1";
 const Review8_Page2 = ({ openPopup }) => {
   return (
     <div

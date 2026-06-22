@@ -5,7 +5,6 @@ import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
 import pauseBtn from "../../../assets/unit1/imgs/Right Video Button.svg";
 import AudioWithCaption from "../../AudioWithCaption";
-import Unit4_Page6_Q2 from "./Unit4_Page6_Q2";
 const Unit4_Page6 = ({ openPopup }) => {
   const captionsExample = [
     { start: 0, end: 4.09, text: "Page 33, Exercise F. Let's sing." },

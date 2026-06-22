@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import page_6 from "../../../assets/img_unit2/imgs/Right 1 Unit 02 Stell Birthday6.jpg";
 import song from "../../../assets/img_unit2/sounds-unit2/Pg15.Sing_Adult Lady.mp3";
 import "./Unit2_Page6.css";
-import Unit2_Page6_Q1 from "./Unit2_Page6_Q1";
-import Unit2_Page6_Q2 from "./Unit2_Page6_Q2";
+
 import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
 import AudioWithCaption from "../../AudioWithCaption";
@@ -44,7 +43,7 @@ const Unit2_Page6 = ({ openPopup }) => {
             height="90"
           />
         </svg>
-      </div> */}
+      </div>
 
       <div
         className="headset-icon-CD-unit2-page6-2 hover:scale-110 transition"
@@ -81,7 +80,7 @@ const Unit2_Page6 = ({ openPopup }) => {
         </svg>
       </div>
 
-      {/* <div
+      <div
         className="click-icon-unit2-page6-2 hover:scale-110 transition"
         style={{ overflow: "visible" }}
       >

@@ -1,7 +1,6 @@
 import page_6 from "../../../assets/unit7/img/Right 1 Unit 07 What are Matter6.jpg";
 import "./Unit7_Page6.css";
-import Unit7_Page6_Q2 from "./Unit7_Page6_Q2";
-import Unit7_Page6_Q3 from "./Unit7_Page6_Q3";
+
 import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
 import song from "../../../assets/unit7/sound/U7P63EXEG.mp3";

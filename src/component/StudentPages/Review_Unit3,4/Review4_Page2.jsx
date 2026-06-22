@@ -10,8 +10,8 @@ const Review4_Page2 = ({ openPopup }) => {
       style={{ backgroundImage: `url(${page_2})` }}
     >
       {/* <img src={page_2} /> */}
-
-      {/* <div
+{/* 
+      <div
         className="click-icon-review4-page2-2 hover:scale-110 transition"
         style={{ overflow: "visible" }}
       >

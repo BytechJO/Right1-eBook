@@ -72,8 +72,8 @@
   left: 50%;
   cursor: pointer;
 }
-
-/* @media screen and (max-width: 1024px) and (max-height: 600px) {
+/* 
+@media screen and (max-width: 1024px) and (max-height: 600px) {
   .click-icon-unit5-page5-1 {
     top: 7%;
   }

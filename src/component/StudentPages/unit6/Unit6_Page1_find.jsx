@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import find_img from "../../../assets/unit6/imgs/G1_U6_Pg_46-47 copy.jpg";
 import ValidationAlert from "../../Popup/ValidationAlert";
 import Rabbit from "../../../assets/img_unit2/imgs/Rabbit.svg";
-import MySVG from "../../../assets/unit6/imgs/U6P46 highlight.svg";
+import MySVG from "../../../assets/unit6/imgs/Asset 6.svg";
 const Unit6_Page1_find = () => {
   const [clickedPoint, setClickedPoint] = useState(null);
   const [checkResult, setCheckResult] = useState(null);
@@ -36,7 +36,7 @@ const Unit6_Page1_find = () => {
     if (!clickedPoint) {
       ValidationAlert.info(
         "Pay attention!",
-        "Please click on the image first."
+        "Please click on the image first.",
       );
       return;
     }
@@ -68,6 +68,7 @@ const Unit6_Page1_find = () => {
           textAlign: "center",
           display: "flex",
           flexDirection: "column",
+          gap: "20px",
           alignItems: "center",
         }}
       >
@@ -76,8 +77,8 @@ const Unit6_Page1_find = () => {
         >
           <img src={Rabbit} style={{ height: "50px", width: "auto" }} />
           <h5 className="header-title-page8">
-            I need your help. Can you help me find the boy shutting the window
-            in the picture?
+            I need your help. Can you help me find the fence by tapping or
+            clicking on it?
           </h5>
         </div>
         <div style={{ position: "relative", display: "inline-block" }}>
@@ -87,6 +88,7 @@ const Unit6_Page1_find = () => {
             style={{
               width: "auto",
               height: "75vh",
+              borderRadius: "8px",
               cursor: "pointer",
               display: "block",
             }}
@@ -118,9 +120,9 @@ const Unit6_Page1_find = () => {
               alt="answer highlight"
               style={{
                 position: "absolute",
-                top: `22%`,
-                left: `40.5%`,
-                height: `25.5%`,
+                top: `28%`,
+                left: `0.5%`,
+                height: `8.1%`,
                 pointerEvents: "none",
               }}
             />

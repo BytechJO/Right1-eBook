@@ -11,8 +11,8 @@ const Unit8_Page5 = ({ openPopup }) => {
       style={{ backgroundImage: `url(${page_5})` }}
     >
       {/* <img src={page_5} /> */}
-
-      {/* <div
+{/* 
+      <div
         className="click-icon-unit8-page5-1 hover:scale-110 transition"
         style={{ overflow: "visible" }}
       >

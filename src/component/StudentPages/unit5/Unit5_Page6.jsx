@@ -1,7 +1,6 @@
 import page_6 from "../../../assets/unit5/imgs/Right 1 Unit 05 Welcome to My Class6.jpg";
 import "./Unit5_Page6.css";
-import Unit5_Page6_Q1 from "./Unit5_Page6_Q1";
-import Unit5_Page6_Q3 from "./Unit5_Page6_Q3";
+
 import CD25_Pg27_Song_AdultLady from "../../../assets/unit5/sounds/U5P45Sing.mp3";
 import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";

@@ -1,7 +1,6 @@
 import page_6 from "../../../assets/unit3/imgs3/right1-unit3-page6.jpg";
 import "./Unit3_Page6.css";
-import Unit3_Page6_Q2 from "./Unit3_Page6_Q2";
-import Unit3_Page6_Q3 from "./Unit3_Page6_Q3";
+
 import CD25_Pg27_Song_AdultLady from "../../../assets/unit3/sound3/U3P27LetsSing.mp3";
 import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";

@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import page_9 from "../../../assets/img_unit2/imgs/Right 1 Unit 02 Stell Birthday9.jpg";
 import "./Unit2_Page9.css";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
-import Unit2_Page9_Q1 from "./Unit2_Page9_Q1";
-import Unit2_Page9_Q2 from "./Unit2_Page9_Q2";
-import Unit2_Page9_Q3 from "./Unit2_Page9_Q3";
+
 
 const Unit2_Page9 = ({ openPopup }) => {
   const [activePopup, setActivePopup] = useState(null);

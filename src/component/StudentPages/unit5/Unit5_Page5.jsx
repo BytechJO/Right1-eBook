@@ -3,11 +3,7 @@ import audioBtn from "../../../assets/unit1/imgs/Page 01/Audio btn.svg";
 import arrowBtn from "../../../assets/unit1/imgs/Page 01/Arrow.svg";
 import pauseBtn from "../../../assets/unit1/imgs/Right Video Button.svg";
 import "./Unit5_Page5.css";
-import Unit5_Page5_Q1 from "./Unit5_Page5_Q1";
-import Unit5_Page5_Q2 from "./Unit5_Page5_Q2";
-import CD24_Pg26_Instructions1_AdultLady from "../../../assets/unit3/sound3/CD24.Pg26_Instructions1_Adult Lady.mp3";
-import Unit5_Page5_Q3 from "./Unit5_Page5_Q3";
-import Unit5_Page5_Q4 from "./Unit5_Page5_Q4";
+// import CD24_Pg26_Instructions1_AdultLady from "../../../assets/unit3/sound3/CD24.Pg26_Instructions1_Adult Lady.mp3";
 const Unit5_Page5 = ({ openPopup }) => {
   return (
     <div
