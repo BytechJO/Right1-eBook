@@ -43,7 +43,7 @@ const Unit2_Page6 = ({ openPopup }) => {
             height="90"
           />
         </svg>
-      </div>
+      </div> */}
 
       <div
         className="headset-icon-CD-unit2-page6-2 hover:scale-110 transition"
@@ -80,7 +80,7 @@ const Unit2_Page6 = ({ openPopup }) => {
         </svg>
       </div>
 
-      <div
+      {/* <div
         className="click-icon-unit2-page6-2 hover:scale-110 transition"
         style={{ overflow: "visible" }}
       >
